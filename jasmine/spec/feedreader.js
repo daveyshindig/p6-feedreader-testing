@@ -71,11 +71,10 @@ $(function() {
           */
          it('should change visibility when clicked', function() {
             $('.menu-icon-link').click();
-            expect($(".menu-hidden").length).toBe(0);
+            expect($("body").hasClass("menu-hidden")).toBe(false);
             $('.menu-icon-link').click();
-            expect($(".menu-hidden").length).not.toBe(0);
-
-         });
+            expect($("body").hasClass("menu-hidden")).toBe(true);
+        });
      });
 
 
